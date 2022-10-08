@@ -13,7 +13,7 @@ def userlogin(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('/home')
+            return redirect('/subscribe_topics')
         else:
             messages.success(request, "Incorrect credentials! Please try again.")
             return render(request, 'login.html', {'form': AuthenticationForm()})
