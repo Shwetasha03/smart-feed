@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subscribe to topics</title>
+    <script>
+        function add_topic() {
+                input = document.createElement('input');
+                input.setAttribute('type', 'text');
+                input.setAttribute('name', 'topics');
+                subscribeLabel = document.getElementById('topicInput')
+                subscribeLabel.parentNode.insertBefore(input, subscribeLabel.nextSibling);
+                var inputsCount = $(':input[value]').length;
+            }
+    </script>
+</head>
+<body>
+Welcome, Username
+
+
+<form method="post">
+    {% csrf_token %}
+    <label id="label">Subscribe to topics here!</label><br>
+
+    <input type="checkbox" id="soccer" name="checks[]" value="Soccer">
+    <label for="soccer"> Soccer</label><br>
+    <input type="checkbox" id="anime" name="checks[]" value="Anime">
+    <label for="anime"> Anime</label><br>
+    <input type="checkbox" id="potter" name="checks[]" value="Potter">
+    <label for="potter"> Potter</label><br>
+    <input type="checkbox" id="tennis" name="checks[]" value="Tennis">
+    <label for="tennis"> Tennis</label><br>
+    <input type="checkbox" id="mets" name="checks[]" value="Mets">
+    <label for="mets"> Mets</label><br>
+    <input type="checkbox" id="apple" name="checks[]" value="Apple">
+    <label for="apple"> Apple</label><br>
+    <input type="checkbox" id="weather" name="checks[]" value="Weather">
+    <label for="weather"> Weather</label><br>
+    <input type="checkbox" id="hollywood" name="checks[]" value="Hollywood">
+    <label for="hollywood"> Hollywood</label><br>
+    <input type="checkbox" id="food" name="checks[]" value="Food">
+    <label for="food"> Food</label><br>
+    <input type="checkbox" id="covid" name="checks[]" value="Covid">
+    <label for="covid"> COVID</label><br>
+
+    <input type="text" name="topics" id="topicInput" value="{{ topic }}">
+    <button id="add" type="button" onclick="add_topic()">Add another topic</button>
+    <input type="submit" value="Submit" id="submitButton">
+</form>
+</body>
+</html>
