@@ -1,0 +1,52 @@
+.universal-padding{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body-background{
+    background: rgb(219,226,226);
+}
+
+.row{
+    background: white;
+    border-radius: 30px;
+    box-shadow: 6px 6px 11px grey;
+}
+
+.img-round{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.login h1{
+    padding: 20px;
+    font-size: 4 rem;
+    font-weight: 600;
+}
+.btn1{
+    border: none;
+    outline:    none;
+    height: 50px;
+    width:  100%;
+    background-color: black;
+    color:  white;
+    border-radius:  4px;
+    font-weight:    bold;
+}
+.btn1:hover{
+    background: white;
+    border: 1px solid;
+    color:  black;
+}
+.btn{
+    border: none;
+    outline:    none;
+    background-color: black;
+}
+.btn:hover{
+    background: white;
+    border: 1px solid;
+    color:  black;
+}
