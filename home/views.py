@@ -1,9 +1,9 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
 
-# from home.forms import TopicsForm
+from django.contrib import messages
+from django.shortcuts import render, redirect
+
 from django.db.utils import IntegrityError
-
 from home.models import Subscription
 
 
@@ -24,11 +24,17 @@ def subscribe_topics(request):
                     sub.save()
                 except IntegrityError:
                     continue
-        return render(request, 'get_sentiment/')
+        return redirect('sentiments')
     return render(request, 'subscribe_topics.html', {"topics": topics})
 
 
+@login_required
 def get_sentiment(request):
-    topics = ['Sports', 'Harry Potter']
+    first_15_subs = Subscription.objects.filter(userid=request.user.id).order_by('-id').all()[:15]
+    topics = [item.category for item in first_15_subs]
+    if request.method == 'POST':
+        if "topic" not in request.POST:
+            messages.error(request, "Food Post failed! Please enter all details.")
+            return redirect('sentiments')
+        topic = request.POST["topic"]
     return render(request, 'get_sentiment.html', {"topics": topics})
-
