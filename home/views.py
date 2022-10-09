@@ -1,6 +1,8 @@
 import json
 import os
 
+from twilio.rest import Client
+
 import requests
 from django.contrib.auth.decorators import login_required
 
@@ -43,13 +45,24 @@ def get_sentiment(request):
             return redirect('sentiments')
         topic = request.POST["topic"]
         vibe = request.POST["vibe"]
-
+        print(request.POST)
         url = os.getenv("API_URL") + topic
         headers = {'auth': os.getenv("AUTH_TOKEN")}
         body = {}
 
         response = requests.post(url, json=body, headers=headers)
         json_response = json.loads(json.JSONDecoder().decode(response.text))
+        if "phoneno" in request.POST:
+            account_sid = os.environ['SID']
+            auth_token = os.environ['TOKEN']
+            client = Client(account_sid, auth_token)
+
+            message = client.messages.create(
+                body=json_response[0]["text"],
+                from_= os.environ['FROM'],
+                to='+1' + request.POST["phoneno"]
+            )
+            print(message.sid)
         for item in json_response:
             if item["sentiment"] == vibe or vibe == "ALL":
                 filtered_response.append(item)

@@ -61,7 +61,12 @@
                 width: 200px;
                 cursor:pointer;
             }
+            .smart_tweet label {
+                color: white;
+            }
         }
+
+
 
     </style>
 </head>
@@ -102,13 +107,21 @@
                     </select>
                 </div>
 
+                <div class="form-field col-lg-2 text-center">
+                    <div class="form-field col-lg-12">
+                     <input type="text" name="phoneno" id="phoneno" value="Enter 10 digit phone no">
+                    </div>
+                </div>
 
-                <div class="form-field col-lg-4 text-center">
+                <div class="form-field col-lg-2 text-center">
                     <div class="form-field col-lg-12">
                         <button type="submit" class="btn btn-secondary submit-btn">Submit</button>
                     </div>
                 </div>
+
+
             </div>
+
         </form>
         {% if results %}
         <section class="bg-light p-5">
