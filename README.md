@@ -45,7 +45,7 @@ We aim to scrape data from other social networking sites as well such as Reddit.
 
 
 ### Application Flow
-* Existing users can log in by entering their username and password
+* Existing users can log in by entering their username and password.
 
 <img width="1440" alt="Screen Shot 2022-10-09 at 12 48 01 PM" src="https://user-images.githubusercontent.com/61991774/194769443-1b8adb86-fc0e-456b-95b7-e6f487fa3ed9.png">
 
@@ -53,7 +53,7 @@ We aim to scrape data from other social networking sites as well such as Reddit.
 
 <img width="1440" alt="Screen Shot 2022-10-09 at 1 00 44 PM" src="https://user-images.githubusercontent.com/61991774/194769809-cef36294-d1c2-4842-ad93-1a57c391c85c.png">
 
-* Once logged in, the user is presented with a variety of topics to view tweets of. If the user doesn't see his topic of interest, he can search for it by typing in the text box and clicking on "Add another topic"
+* Once logged in, the user is presented with a variety of topics to view tweets of. If the user doesn't see his topic of interest, he can search for it by typing in the text box and clicking on "Submit". The user can enter multiple topics by clicking on "Add another topic".
 
 <img width="1423" alt="Screen Shot 2022-10-09 at 1 05 02 PM" src="https://user-images.githubusercontent.com/61991774/194770008-254a4a21-c41a-4bbb-ba9b-955a3b3bde31.png">
 
@@ -62,3 +62,5 @@ We aim to scrape data from other social networking sites as well such as Reddit.
 <img width="1435" alt="Screen Shot 2022-10-09 at 1 07 04 PM" src="https://user-images.githubusercontent.com/61991774/194770152-50f37ff4-80bb-4bc3-b0c3-61d523b55395.png">
 
 * In the end, the user can see the requested tweets with the desired vibe he selected.
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/69919392/194770770-80c07db7-37ba-42c0-bffd-5666e3d2974e.png">
