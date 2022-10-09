@@ -17,5 +17,6 @@ def subscribe_topics(request):
 
 
 def get_sentiment(request):
-    return render(request, 'get_sentiment.html')
+    topics = ['Sports', 'Harry Potter']
+    return render(request, 'get_sentiment.html', {"topics": topics})
 
