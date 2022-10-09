@@ -2,21 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tweet Sentiments</title>
 </head>
 <body>
 <form method="post">
-    Sentiments!
-    <div>
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown button
-        </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          {% for selected_topic in topics %}
-             <a class="dropdown-item" href="#" id="id">{{ selected_topic }}</a>
-          {% endfor %}
-      </div>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{message}}
     </div>
+    {% endfor %}
+    {% endif %}
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            <select name="topic" class="dropdown" id="type">
+                <option value="none" selected disabled hidden>Select subscription</option>
+                {% for selected_topic in topics %}
+                <option>{{ selected_topic }}</option>
+                {% endfor %}
+            </select>
+
+            <div class="form-field col-lg-12">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+
+        </div>
+    </form>
 </form>
 </body>
 </html>
