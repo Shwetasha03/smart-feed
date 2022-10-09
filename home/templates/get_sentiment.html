@@ -25,12 +25,28 @@
                 {% endfor %}
             </select>
 
+            <select name="vibe" class="dropdown" id="vibe">
+                <option value="none" selected disabled hidden>Select vibe</option>
+                <option value="ALL">ALL</option>
+                <option value="NEUTRAL">NEUTRAL</option>
+                <option value="POSITIVE">POSITIVE</option>
+                <option value="NEGATIVE">NEGATIVE</option>
+            </select>
+
             <div class="form-field col-lg-12">
                 <button type="submit" class="submit-btn">Submit</button>
             </div>
 
         </div>
     </form>
+
+    {% for item in results %}
+    <tr>
+        <td>{{ item.text }}</td>
+        <td>{{ item.sentiment }}</td>
+    </tr>
+    {% endfor %}
+
 </form>
 </body>
 </html>
