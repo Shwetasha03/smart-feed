@@ -39,7 +39,7 @@ def get_sentiment(request):
     filtered_response = []
     if request.method == 'POST':
         if "topic" not in request.POST:
-            messages.error(request, "Food Post failed! Please enter all details.")
+            messages.error(request, "Please select a Subscribed topic and the sentiment of tweets!")
             return redirect('sentiments')
         topic = request.POST["topic"]
         vibe = request.POST["vibe"]
@@ -50,7 +50,6 @@ def get_sentiment(request):
 
         response = requests.post(url, json=body, headers=headers)
         json_response = json.loads(json.JSONDecoder().decode(response.text))
-        json_response = [{'text': 'Tweet', 'sentiment': 'Sentiment'}] + json_response
         for item in json_response:
             if item["sentiment"] == vibe or vibe == "ALL":
                 filtered_response.append(item)
