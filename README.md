@@ -43,3 +43,24 @@ html5<br />
 lambda<br />
 sql<br />
 twilio<br />
+
+##Application Flow
+- Existing users can log in by entering their username and password
+
+<img width="1440" alt="Screen Shot 2022-10-09 at 12 48 01 PM" src="https://user-images.githubusercontent.com/61991774/194769443-1b8adb86-fc0e-456b-95b7-e6f487fa3ed9.png">
+
+- New users can register by creating an account. The user needs to enter his details here in order to create an account.
+
+<img width="1440" alt="Screen Shot 2022-10-09 at 1 00 44 PM" src="https://user-images.githubusercontent.com/61991774/194769809-cef36294-d1c2-4842-ad93-1a57c391c85c.png">
+
+- Once logged in, the user is presented with a variety of topics to view tweets of. If the user doesn't see his topic of interest, he can search for it by typing in the text box and clicking on "Add another topic"
+
+<img width="1423" alt="Screen Shot 2022-10-09 at 1 05 02 PM" src="https://user-images.githubusercontent.com/61991774/194770008-254a4a21-c41a-4bbb-ba9b-955a3b3bde31.png">
+
+- On the next page, the user is prompted to select one of the topics he selected in the previous page. He can also select the vibe of the requested tweets- positive, negative, neutral or all. The user can then enter his phone number (which must be pre-verified on Twilio) and then he will receive text messages of the requested tweets on that number. 
+- 
+<img width="1435" alt="Screen Shot 2022-10-09 at 1 07 04 PM" src="https://user-images.githubusercontent.com/61991774/194770152-50f37ff4-80bb-4bc3-b0c3-61d523b55395.png">
+
+-In the end, the user can see the requested tweets with the desired vibe he selected. 
+
+
