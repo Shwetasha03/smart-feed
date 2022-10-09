@@ -5,10 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-Sentiments!
-    {% for selected_topic in topics %}
-        {{ selected_topic }}
-    {% endfor %}
+<form method="post">
+    Sentiments!
+    <div>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          {% for selected_topic in topics %}
+             <a class="dropdown-item" href="#" id="id">{{ selected_topic }}</a>
+          {% endfor %}
+      </div>
+    </div>
 </form>
 </body>
 </html>
