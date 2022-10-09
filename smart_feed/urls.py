@@ -23,6 +23,6 @@ urlpatterns = [
     path('', login.userlogin),
     path('login/', login.userlogin),
     path('register/', login.register_request),
-    path('subscribe_topics/', home.subscribe_topics),
-    path('get_sentiment/', home.get_sentiment),
+    path('topics/', home.subscribe_topics, name='topics'),
+    path('sentiments/', home.get_sentiment, name='sentiments'),
 ]
