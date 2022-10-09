@@ -34,12 +34,11 @@ The following technologies have been used and these individual components have b
 We aim to scrape data from other social networking sites as well such as Reddit. This will scale up our project and allow us to cover more data for better results.
 
 ### Built With:
-amazon-web-services<br />
-bootstrap<br />
-css3<br />
-django<br />
-ec2<br />
-html5<br />
-lambda<br />
-sql<br />
-twilio<br />
+
+* HTML: Page layout has been designed using HTML.
+* CSS: CSS has been used for the designing part.
+* Python: All the project design has been written in python.
+* MySql: MySQL database has been used as a database for the project.
+* Django: Django framework used as front-end.
+* AWS EC2: Website is hosted on Amazon EC2 and S3
+* Twilio: Messaging service used to send tweets to the user’s phone.
